@@ -1,0 +1,35 @@
+# Alertar e pedir informação no Pyautogui 
+
+import pyautogui
+import time
+
+#pyautogui.alert(text= 'Digite seu Orçamento', title= 'Orçamento', button= 'ok')
+
+#email= pyautogui.prompt(text= 'Digite seu e-mail',  title='informações obrigatórias')
+#print(f"voce digitou- {email}")
+
+#resposta= pyautogui.confirm(text='continuar automação ??' , title='automação', buttons=['sim', 'não', 'cancelar'])
+
+
+#if resposta == 'sim':
+#    print("continuar automação")
+
+#elif resposta == 'não':
+#    print("encerrando automação")
+
+#else:
+#    print("operação cancelada")
+
+'''DESAFIO------
+crie um programa que pede o usuario e senha ,
+na sequencia copie e cole oas informações em um bloco de notas 
+OBS : EM SEU CASO PODE FAZER ALFO DIFERENTE E TENTE COMPLICAR UM POUQUINHO MAIS '''
+
+email= pyautogui.prompt(text='Digite seu E-mail', title= 'login')
+senha= pyautogui.password(text= 'Digite sua senha', title= 'login', mask= '*')
+
+pyautogui.click(82,135, duration= 2)
+time.sleep(2)
+pyautogui.write(email)
+pyautogui.press('Enter')
+pyautogui.write(senha)
